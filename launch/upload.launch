@@ -3,12 +3,12 @@
   <arg name="debug" default="0"/>
 
   <!-- Vehicle's initial pose -->
-  <arg name="x"     default="0"/>
+  <arg name="x"     default="-5"/>
   <arg name="y"     default="0"/>
-  <arg name="z"     default="1"/>
+  <arg name="z"     default="-0.5"/>
   <arg name="roll"  default="0"/>
   <arg name="pitch" default="0"/>
-  <arg name="yaw"   default="0"/>
+  <arg name="yaw"   default="-1.57079"/>
 
   <arg name="use_geodetic" default="false"/>
   <arg name="latitude" default="0"/>

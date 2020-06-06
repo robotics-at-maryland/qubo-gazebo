@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find qubo-gazebo)/launch/nbrf.launch"/>
+    <include file="$(find qubo-gazebo)/launch/upload.launch"/>
+    <include file="$(find qubo-gazebo)/launch/start_thruster_manager.launch"/>
+</launch>
