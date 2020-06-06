@@ -3,8 +3,8 @@
   <xacro:arg name="debug" default="0"/>
   <xacro:arg name="namespace" default="qubo_gazebo"/>
   <!-- Include the ROV macro file -->
-  <xacro:include filename="$(find qubo_gazebo_description)/urdf/base.xacro"/>
-  <xacro:include filename="$(find qubo_gazebo_description)/urdf/gazebo.xacro"/>
+  <xacro:include filename="$(find qubo-gazebo)/qubo_sim/urdf/base.xacro"/>
+  <xacro:include filename="$(find qubo-gazebo)/qubo_sim/urdf/gazebo.xacro"/>
 
   <!-- Create the qubo_gazebo -->
   <xacro:qubo_gazebo_base namespace="$(arg namespace)">

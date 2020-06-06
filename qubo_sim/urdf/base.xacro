@@ -7,10 +7,10 @@
   <!-- Loading the UUV simulator ROS plugin macros -->
   <xacro:include filename="$(find uuv_gazebo_ros_plugins)/urdf/snippets.xacro"/>
   <!-- Loading vehicle's specific macros -->
-  <xacro:include filename="$(find qubo_gazebo_description)/urdf/snippets.xacro"/>
+  <xacro:include filename="$(find qubo-gazebo)/qubo_sim/urdf/snippets.xacro"/>
 
 
-  <xacro:include filename="$(find qubo_gazebo_description)/urdf/materials.xacro" />
+  <xacro:include filename="$(find qubo-gazebo)/qubo_sim/urdf/materials.xacro" />
 
   <!--
     Vehicle's parameters (remember to enter the model parameters below)
@@ -28,12 +28,12 @@
     the mesh pose will have to be corrected below in the <visual> block.
     Open the meshes for the RexROV vehicle in Blender to see an example on the mesh placement.
   -->
-  <xacro:property name="visual_mesh_file" value="file://$(find qubo_gazebo_description)/meshes/vehicle.stl"/>
+  <xacro:property name="visual_mesh_file" value="file://$(find qubo-gazebo)/qubo_sim/meshes/vehicle.stl"/>
 
   <!-- Collision geometry mesh, usually in STL format (it is recommended to keep
   this geometry as simple as possible to improve the performance the physics engine
   regarding the computation of collision forces) -->
-  <xacro:property name="collision_mesh_file" value="file://$(find qubo_gazebo_description)/meshes/vehicle.stl"/>
+  <xacro:property name="collision_mesh_file" value="file://$(find qubo-gazebo)/qubo_sim/meshes/vehicle.stl"/>
 
   <!-- Vehicle macro -->
   <xacro:macro name="qubo_gazebo_base" params="namespace *gazebo">
@@ -75,10 +75,10 @@
     <xacro:insert_block name="gazebo"/>
 
     <!-- Include the thruster modules -->
-    <xacro:include filename="$(find qubo_gazebo_description)/urdf/actuators.xacro"/>
+    <xacro:include filename="$(find qubo-gazebo)/qubo_sim/urdf/actuators.xacro"/>
 
     <!-- Include the sensor modules -->
-    <xacro:include filename="$(find qubo_gazebo_description)/urdf/sensors.xacro"/>
+    <xacro:include filename="$(find qubo-gazebo)/qubo_sim/urdf/sensors.xacro"/>
 
   </xacro:macro>
 
